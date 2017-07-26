@@ -34,6 +34,7 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 import static com.mist.it.pod_nk.MyConstant.urlSaveSignature;
+import static com.mist.it.pod_nk.MyConstant.urlUploadPicture;
 
 public class SignatureActivity extends AppCompatActivity {
 
@@ -145,8 +146,8 @@ public class SignatureActivity extends AppCompatActivity {
             Log.d("Data", mUploadedFileName);
             Log.d("Data", stringStoreId);
             Log.d("Data", bitmap.toString());
-            Log.d("Data", urlSaveSignature);
-            final String result = UploadImageUtils.uploadFile(mUploadedFileName, urlSaveSignature, bitmap, stringStoreId, "S");
+            Log.d("Data", urlUploadPicture);
+            final String result = UploadImageUtils.uploadFile(mUploadedFileName, urlUploadPicture, bitmap, stringStoreId, "S");
             Log.d("TAG", "Do in back after save:-->" + result);
 
             if (result == "NOK") {
@@ -163,10 +164,11 @@ public class SignatureActivity extends AppCompatActivity {
                             .add("pTimestamp", stringTimestamp)
                             .build();
                     Request.Builder builder = new Request.Builder();
-                    Request request = builder.url(urlSaveSignature).post(requestBody).build();
+                    Request request = builder.url(urlUploadPicture).post(requestBody).build();
                     Response response = okHttpClient.newCall(request).execute();
                     return response.body().string();
                 } catch (Exception e) {
+                    Log.d("TAG", String.valueOf(e));
                     return "NOK";
                 }
             }
