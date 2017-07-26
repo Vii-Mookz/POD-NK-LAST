@@ -64,8 +64,9 @@
             android:layout_height="@dimen/button_height"
             android:layout_margin="@dimen/mini_margin"
             android:layout_weight="1"
-            android:background="@drawable/silver_button"
-            android:text="@string/Save" />
+            android:background="@drawable/turquoise_button"
+            android:text="@string/Save"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/btnSAClear"
@@ -73,7 +74,8 @@
             android:layout_height="@dimen/button_height"
             android:layout_margin="@dimen/mini_margin"
             android:layout_weight="1"
-            android:background="@drawable/silver_button"
-            android:text="@string/Clear" />
+            android:background="@drawable/salmon_button"
+            android:text="@string/Clear"
+            android:textStyle="bold" />
     </LinearLayout>
 </RelativeLayout>
