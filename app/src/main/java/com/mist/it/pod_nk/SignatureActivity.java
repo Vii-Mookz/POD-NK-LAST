@@ -140,8 +140,11 @@ public class SignatureActivity extends AppCompatActivity {
 
         @Override
         protected String doInBackground(Void... voids) {
+            final String[] time = new String[1];
+            GPSManager gpsManager = new GPSManager(SignatureActivity.this);
             uploadImageUtils = new UploadImageUtils();
             mUploadedFileName = "signature.jpg";
+            time[0] = gpsManager.getDateTime();
 //
             Log.d("Data", mUploadedFileName);
             Log.d("Data", stringStoreId);
