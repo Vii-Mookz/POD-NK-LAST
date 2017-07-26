@@ -150,9 +150,10 @@ public class SignatureActivity extends AppCompatActivity {
             Log.d("Data", stringStoreId);
             Log.d("Data", bitmap.toString());
             Log.d("Data", urlUploadPicture);
+
             final String result = UploadImageUtils.uploadFile(mUploadedFileName, urlUploadPicture, bitmap, stringStoreId, "S");
             Log.d("TAG", "Do in back after save:-->" + result);
-
+            Log.d("TAG", "TIME ==>"+ time[0]);
             if (result == "NOK") {
                 return "NOK";
             } else {
@@ -164,7 +165,7 @@ public class SignatureActivity extends AppCompatActivity {
                             .add("pSignName", signNameString)
                             .add("File_Name", mUploadedFileName)
                             .add("pUser", loginStrings[5])
-                            .add("pTimestamp", stringTimestamp)
+                            .add("pTimestamp", time[0])
                             .build();
                     Request.Builder builder = new Request.Builder();
                     Request request = builder.url(urlUploadPicture).post(requestBody).build();
