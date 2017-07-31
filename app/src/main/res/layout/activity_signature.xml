@@ -64,11 +64,11 @@
             android:layout_height="@dimen/button_height"
             android:layout_margin="@dimen/mini_margin"
             android:layout_weight="1"
-            android:background="@drawable/turquoise_button"
+            android:background="@drawable/blue_button"
             android:drawableLeft="@android:drawable/ic_menu_save"
             android:drawableStart="@android:drawable/ic_menu_save"
-            android:paddingStart="20dp"
             android:paddingEnd="20dp"
+            android:paddingStart="20dp"
             android:text="@string/Save"
             android:textStyle="bold" />
 
