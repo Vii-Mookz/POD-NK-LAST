@@ -1,7 +1,7 @@
 package com.mist.it.pod_nk;
 
-import android.content.Context;
 import android.content.Intent;
+import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Color;
@@ -51,7 +51,7 @@ public class SignatureActivity extends AppCompatActivity {
 
 
     View mView;
-    String stringStoreId, SignName, stringTimestamp;
+    String stringStoreId, SignName;
     String[] loginStrings;
 
 
@@ -146,6 +146,7 @@ public class SignatureActivity extends AppCompatActivity {
             mUploadedFileName = "signature.jpg";
             time[0] = gpsManager.getDateTime();
 //
+
             Log.d("Data", mUploadedFileName);
             Log.d("Data", stringStoreId);
             Log.d("Data", bitmap.toString());
