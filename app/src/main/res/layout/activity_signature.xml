@@ -60,21 +60,29 @@
 
         <Button
             android:id="@+id/btnSASave"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="@dimen/button_height"
             android:layout_margin="@dimen/mini_margin"
             android:layout_weight="1"
             android:background="@drawable/turquoise_button"
+            android:drawableLeft="@android:drawable/ic_menu_save"
+            android:drawableStart="@android:drawable/ic_menu_save"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
             android:text="@string/Save"
             android:textStyle="bold" />
 
         <Button
             android:id="@+id/btnSAClear"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="@dimen/button_height"
             android:layout_margin="@dimen/mini_margin"
             android:layout_weight="1"
             android:background="@drawable/salmon_button"
+            android:drawableLeft="@android:drawable/ic_delete"
+            android:drawableStart="@android:drawable/ic_delete"
+            android:paddingEnd="20dp"
+            android:paddingStart="20dp"
             android:text="@string/Clear"
             android:textStyle="bold" />
     </LinearLayout>
